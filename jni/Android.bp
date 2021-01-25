@@ -1,0 +1,53 @@
+
+
+cc_library_shared {
+    name: "libpaintworker",
+    defaults: ["skia_deps"],
+    srcs: [
+        "wenote_jni.cpp",
+//        "rgb888_to_gray_256_neon.s",
+        "main.cpp",
+        "paintworker.cpp",
+        "commitworker.cpp",
+        "getevent.cpp",
+        "worker.cpp",
+       
+    ],
+
+    shared_libs: [
+        "libjpeg",
+        "libpng",
+        "libcutils",
+        "libandroidfw",
+        "libutils",
+        "libbinder",
+        "libui",
+        "libgui",
+        "liblog",
+    ],
+    whole_static_libs: [
+        "libskia",
+    ],
+
+    include_dirs: [
+        "system/core/include/utils",
+        "frameworks/base/core/jni/include",
+        "external/skia/src/core",
+        "external/libjpeg-turbo",
+        "external/libpng",
+    ],
+
+    cflags: [
+        "-O2",
+        "-g",
+        "-W",
+        "-Wall",
+        "-Wno-unused-parameter",
+        "-Wno-unused-variable",
+        "-Wno-constant-conversion",
+        "-Wno-sign-compare",
+    ],
+
+    compile_multilib: "32",
+
+}

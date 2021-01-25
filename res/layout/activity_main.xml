@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:greendroid="http://schemas.android.com/apk/res/com.cyrilmottier.android.gdcatalog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:paddingTop="4dp">
+
+        <Button
+            android:id="@+id/redraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_select"
+            android:text="回放" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_select"
+            android:text="清除" />
+
+        <Button
+            android:id="@+id/undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_select"
+            android:text="UnDo" />
+
+<!--        <Button
+            android:id="@+id/pen_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_select"
+            android:text="宽度3" />
+
+        <Button
+            android:id="@+id/eraser_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_select"
+            android:text="橡皮宽15" />
+
+        <CheckBox
+            android:id="@+id/strokes"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_select"
+            android:text="笔锋" />-->
+
+        <CheckBox
+            android:id="@+id/eraser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_select"
+            android:textColor="@android:color/black"
+            android:text="橡皮擦" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_select"
+            android:text="退出" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ff000000" />
+
+    <!-- <FrameLayout
+        android:id="@+id/tablet_view"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout> -->
+    <com.rockchip.notedemo.NoteView
+        android:id="@+id/note_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_view"
+        android:background="#ffffffff" />
+    <!-- <com.wetao.note.WeNoteView
+        android:id="@+id/note_view"
+        android:layout_margin="100px"
+        android:layout_width="1150px"
+        android:layout_height="1560px"
+        android:layout_marginLeft="103px"
+        android:layout_marginRight="150px"
+        android:layout_above="@+id/bottom_view"
+        android:background="#ffffffff" /> -->
+</LinearLayout>
